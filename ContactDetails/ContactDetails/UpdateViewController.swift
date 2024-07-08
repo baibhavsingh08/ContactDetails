@@ -25,5 +25,9 @@ class UpdateViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func close(){
+        dismiss(animated: true, completion: nil)
+    }
 
 }
