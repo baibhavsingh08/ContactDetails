@@ -7,13 +7,30 @@
 
 import UIKit
 
-class UpdateViewController: UIViewController {
+protocol ContactDetailProtocol: AnyObject{
+    func didUpdateDetails(email: String, phoneNumber: String)
+}
+
+class UpdateViewController: UIViewController{
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    
+    weak var delegate: ContactDetailProtocol?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+
+
     }
+    
+    
+    
+    
+    
+    
     
 
     /*
@@ -27,7 +44,14 @@ class UpdateViewController: UIViewController {
     */
     
     @IBAction func close(){
-        dismiss(animated: true, completion: nil)
+        let emailTextFieldValue = emailTextField.text ?? "no email provided"
+        let phoneTextFieldValue = phoneTextField.text ?? "no phone number provided"
+        
+        print("email is \(emailTextFieldValue)")
+        print("phone number is \(phoneTextFieldValue)")
+        
+        delegate?.didUpdateDetails(email: emailTextFieldValue, phoneNumber: phoneTextFieldValue)
+        navigationController?.popViewController(animated: true)
     }
 
 }
