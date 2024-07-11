@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
-    
+
+    var x:Int
     
     override func viewDidLoad() {
         super.viewDidLoad()
