@@ -16,6 +16,8 @@ class ViewController: UIViewController {
 
     var x:Int
     
+    var abc: String = " "
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
