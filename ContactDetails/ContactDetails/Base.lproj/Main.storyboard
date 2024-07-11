@@ -90,62 +90,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Update Details Form" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odM-bI-Tyo">
-                                <rect key="frame" x="19" y="94" width="358" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25i-9W-sDa">
-                                <rect key="frame" x="20" y="236" width="110" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter new email" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyh-cy-YF0">
-                                <rect key="frame" x="19" y="297" width="358" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="35"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                <connections>
-                                    <outlet property="delegate" destination="ZVL-Nv-JbZ" id="WAe-ka-d7E"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCz-7W-123">
-                                <rect key="frame" x="20" y="416" width="239" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter new phone number" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QBj-Eq-fxh">
-                                <rect key="frame" x="19" y="478" width="358" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="35"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <outlet property="delegate" destination="ZVL-Nv-JbZ" id="pcy-Iy-n9R"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoE-4i-yd8">
-                                <rect key="frame" x="74" y="656" width="245" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Update Details">
-                                    <fontDescription key="titleFontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="35"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="close" destination="ZVL-Nv-JbZ" eventType="touchUpInside" id="Fxq-qm-Ved"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="AKm-F7-ihb">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update Details Form" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odM-bI-Tyo">
+                                        <rect key="frame" x="17.666666666666657" y="0.0" width="358" height="251.66666666666666"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xT9-FI-84I">
+                                        <rect key="frame" x="9" y="253.66666666666669" width="375" height="251.66666666666669"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25i-9W-sDa" userLabel="Email:">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="55.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter new email" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyh-cy-YF0">
+                                                <rect key="frame" x="0.0" y="65.333333333333314" width="375" height="55.666666666666657"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="35"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="ZVL-Nv-JbZ" id="WAe-ka-d7E"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCz-7W-123">
+                                                <rect key="frame" x="0.0" y="131" width="375" height="55.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter new phone number" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QBj-Eq-fxh">
+                                                <rect key="frame" x="0.0" y="196.33333333333331" width="375" height="55.333333333333343"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="35"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="ZVL-Nv-JbZ" id="pcy-Iy-n9R"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="vyh-cy-YF0" firstAttribute="centerX" secondItem="xT9-FI-84I" secondAttribute="centerX" id="4xX-UP-5zV"/>
+                                            <constraint firstItem="iCz-7W-123" firstAttribute="centerX" secondItem="xT9-FI-84I" secondAttribute="centerX" id="5RG-8S-eIC"/>
+                                            <constraint firstItem="vyh-cy-YF0" firstAttribute="leading" secondItem="xT9-FI-84I" secondAttribute="leading" id="8fN-xq-dRG"/>
+                                            <constraint firstAttribute="trailing" secondItem="vyh-cy-YF0" secondAttribute="trailing" id="9oS-Y2-BMV"/>
+                                            <constraint firstAttribute="trailing" secondItem="25i-9W-sDa" secondAttribute="trailing" id="Ijl-Q8-qfc"/>
+                                            <constraint firstItem="vyh-cy-YF0" firstAttribute="centerX" secondItem="xT9-FI-84I" secondAttribute="centerX" id="JOE-bm-CFT"/>
+                                            <constraint firstItem="25i-9W-sDa" firstAttribute="leading" secondItem="xT9-FI-84I" secondAttribute="leading" id="QH7-tR-51E"/>
+                                            <constraint firstItem="vyh-cy-YF0" firstAttribute="leading" secondItem="xT9-FI-84I" secondAttribute="leading" id="UoL-Bz-XBT"/>
+                                            <constraint firstAttribute="trailing" secondItem="vyh-cy-YF0" secondAttribute="trailing" id="fb7-He-hOV"/>
+                                            <constraint firstItem="vyh-cy-YF0" firstAttribute="leading" secondItem="xT9-FI-84I" secondAttribute="leading" id="gNE-jB-QbG"/>
+                                            <constraint firstAttribute="trailing" secondItem="vyh-cy-YF0" secondAttribute="trailing" id="gyR-AT-4ow"/>
+                                            <constraint firstItem="25i-9W-sDa" firstAttribute="centerX" secondItem="xT9-FI-84I" secondAttribute="centerX" id="mmb-mb-mJk"/>
+                                            <constraint firstItem="QBj-Eq-fxh" firstAttribute="centerX" secondItem="xT9-FI-84I" secondAttribute="centerX" id="yUW-W4-xPR"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9mJ-Qo-lxQ">
+                                        <rect key="frame" x="0.0" y="507.33333333333343" width="393" height="251.66666666666669"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoE-4i-yd8">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="251.66666666666666"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Update Details">
+                                                    <fontDescription key="titleFontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="close" destination="ZVL-Nv-JbZ" eventType="touchUpInside" id="Fxq-qm-Ved"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="xoE-4i-yd8" firstAttribute="centerY" secondItem="9mJ-Qo-lxQ" secondAttribute="centerY" id="b79-P6-Gza"/>
+                                            <constraint firstItem="xoE-4i-yd8" firstAttribute="centerX" secondItem="9mJ-Qo-lxQ" secondAttribute="centerX" id="cUH-UN-dy2"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="odM-bI-Tyo" firstAttribute="centerX" secondItem="AKm-F7-ihb" secondAttribute="centerX" id="Ckf-d1-6IB"/>
+                                    <constraint firstItem="9mJ-Qo-lxQ" firstAttribute="centerX" secondItem="AKm-F7-ihb" secondAttribute="centerX" id="FMj-1L-fL1"/>
+                                    <constraint firstItem="9mJ-Qo-lxQ" firstAttribute="leading" secondItem="AKm-F7-ihb" secondAttribute="leading" id="J7c-1K-HBy"/>
+                                    <constraint firstAttribute="bottom" secondItem="9mJ-Qo-lxQ" secondAttribute="bottom" id="jpe-VH-6gj"/>
+                                    <constraint firstAttribute="trailing" secondItem="9mJ-Qo-lxQ" secondAttribute="trailing" id="mi6-Xd-CiP"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AN3-OM-zwJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AKm-F7-ihb" firstAttribute="top" secondItem="AN3-OM-zwJ" secondAttribute="top" id="2t8-gS-S4Q"/>
+                            <constraint firstItem="AKm-F7-ihb" firstAttribute="leading" secondItem="AN3-OM-zwJ" secondAttribute="leading" id="DOp-2C-tRt"/>
+                            <constraint firstItem="AN3-OM-zwJ" firstAttribute="trailing" secondItem="AKm-F7-ihb" secondAttribute="trailing" id="Ksb-NS-GSS"/>
+                            <constraint firstItem="AKm-F7-ihb" firstAttribute="top" secondItem="AN3-OM-zwJ" secondAttribute="top" id="VWb-61-e6k"/>
+                            <constraint firstItem="AKm-F7-ihb" firstAttribute="leading" secondItem="oXe-4e-IDT" secondAttribute="leading" id="foF-QT-Wum"/>
+                            <constraint firstAttribute="trailing" secondItem="AKm-F7-ihb" secondAttribute="trailing" id="k6P-1N-7GR"/>
+                            <constraint firstItem="AN3-OM-zwJ" firstAttribute="bottom" secondItem="AKm-F7-ihb" secondAttribute="bottom" id="sTd-CK-7yw"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9cF-zb-A1O"/>
                     <connections>
                         <outlet property="emailTextField" destination="vyh-cy-YF0" id="kJp-Pu-Yhf"/>
                         <outlet property="phoneTextField" destination="QBj-Eq-fxh" id="1Fq-sT-IPg"/>
